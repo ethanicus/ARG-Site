@@ -1,0 +1,62 @@
+/* Define custom variables */
+:root {
+    --main-accent-color: #aa0000;
+}
+
+/* Overall styling for the page */
+body {
+    display: flex;
+    justify-content: center;
+    background-color: #dedac5;
+    font: 15px Arial, sans-serif;
+
+    margin: 0;
+}
+
+/* Main content container */
+.mainbody {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 768px;
+    height: 100vh;
+    background-color: white;
+}
+
+/* Styling for all buttons */
+.sbbutton {
+    color: white;
+    background: none;
+    border: 2px outset #ff6550;
+    font-weight: 700;
+
+    width: 100%;
+}
+
+.sbbutton:active {
+    background: #00000033;
+    border: 2px inset #ff6550;
+}
+
+/* Right-hand content area */
+.content {
+    flex-grow: 1;
+}
+
+/* Left-hand sidebar */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--main-accent-color);
+    width: 180px;
+    height: auto;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+/* Optional styling for items within the sidebar */
+.sidebaritem {
+    /* ... */
+}
