@@ -42,6 +42,7 @@ body {
 /* Right-hand content area */
 .content {
     flex-grow: 1;
+    padding: 16px;
 }
 
 /* Left-hand sidebar */
