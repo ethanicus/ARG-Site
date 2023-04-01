@@ -1,54 +1,8 @@
-<script>
-    function replaceYearNum() {
-        const currentDate = new Date();
-        const currentYear = currentDate.getFullYear();
-        const yearNum = (currentYear - 25).toString().slice(-2);
-
-        const elements = document.getElementsByTagName('*');
-        for (let i = 0; i < elements.length; i++) {
-            const element = elements[i];
-            if (element.childNodes.length > 0) {
-                for (let j = 0; j < element.childNodes.length; j++) {
-                    const node = element.childNodes[j];
-                    if (node.nodeType === 3) {
-                        const text = node.nodeValue;
-                        const replacedText = text.replace(/YEARNUM/g, yearNum);
-                        if (replacedText !== text) {
-                            element.replaceChild(document.createTextNode(replacedText), node);
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    function replaceCurrentLoc() {
-        // Get the current page's URL
-        var currentUrl = window.location.href;
-
-        // Get the base URL of the site
-        var baseUrl = window.location.protocol + "//" + window.location.host;
-
-        // Replace the base URL with an empty string to get the relative file path
-        var relativePath = currentUrl.replace(baseUrl, "");
-
-        // Remove the file name from the relative path
-        var lastSlashIndex = relativePath.lastIndexOf("/");
-        relativePath = relativePath.substring(0, lastSlashIndex + 1);
-
-        // Replace all instances of "CURRENTLOC" with the relative file path
-        document.body.innerHTML = document.body.innerHTML.replace(/CURRENTLOC/g, relativePath);
-    }
-
-    window.addEventListener('load', () => {
-        replaceYearNum();
-        replaceCurrentLoc();
-    });
-
-</script>
-
 <head>
     <link type="text/css" rel="stylesheet" href="/css/indexpage.css" />
+
+    <script src="/replaceCurrentLoc.js"></script>
+    <script src="/replaceYearNum.js"></script>
 </head>
 
 <h1>Index of CURRENTLOC</h1>
@@ -68,7 +22,7 @@
         </tr>
 
         <tr>
-            <td><a href="999.html">[AUTOMATIC] Request Ticket</a></td>
+            <td><a href="message/999.html">[AUTOMATIC] Request Ticket</a></td>
             <td>SYSTEM</td>
             <td>3/31/YEARNUM, 0:06:26</td>
         </tr>

@@ -1,6 +1,8 @@
 /* Define custom variables */
 :root {
     --main-accent-color: #aa0000;
+
+    --main-font: Georgia;
 }
 
 html {
@@ -12,7 +14,7 @@ body {
     display: flex;
     justify-content: center;
     background-color: #dedac5;
-    font: 15px Arial, sans-serif;
+    font: 15px var(--main-font), sans-serif;
 
     margin: 0;
 }
@@ -34,6 +36,8 @@ body {
     color: white;
     background: none;
     border: 2px outset #ff6550;
+
+    font: var(--main-font);
     font-weight: 700;
 
     width: 100%;
