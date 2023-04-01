@@ -3,6 +3,10 @@
     --main-accent-color: #aa0000;
 }
 
+html {
+    opacity: 0;
+}
+
 /* Overall styling for the page */
 body {
     display: flex;
@@ -14,7 +18,8 @@ body {
 }
 
 /* Main content container */
-.mainbody {
+.mainbody,
+#template-content {
     display: flex;
     flex-direction: row;
     margin: 0 auto;
@@ -32,6 +37,8 @@ body {
     font-weight: 700;
 
     width: 100%;
+
+    margin: 6px;
 }
 
 .sbbutton:active {
@@ -55,9 +62,4 @@ body {
     height: auto;
     padding: 16px;
     box-sizing: border-box;
-}
-
-/* Optional styling for items within the sidebar */
-.sidebaritem {
-    /* ... */
 }
